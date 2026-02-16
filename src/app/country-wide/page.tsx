@@ -14,14 +14,14 @@ export default function CountryWidePage() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-32 pb-40 border-b border-slate-200">
+      <section className="relative overflow-hidden min-h-[85vh] md:min-h-[70vh] flex items-center border-b border-slate-200">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-[center_20%] md:bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-infrastructure.png')" }}
           />
-          <div className="absolute inset-0 bg-slate-900/35" />
+          <div className="absolute inset-0 bg-slate-900/55 md:bg-slate-900/35" />
         </div>
 
         {/* Decorative Grid */}
@@ -29,7 +29,7 @@ export default function CountryWidePage() {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05]" />
         </div>
 
-        <div className="container relative z-10 px-4 md:px-6 text-center">
+        <div className="container relative z-10 px-4 md:px-6 text-center pt-28 pb-16 md:pt-32 md:pb-24">
           <Badge variant="outline" className="mb-6 px-4 py-1.5 border-amber-500/30 bg-amber-500/10 text-amber-400 tracking-wider uppercase text-[10px] sm:text-xs font-semibold backdrop-blur-sm">
             Financial Institution
           </Badge>
