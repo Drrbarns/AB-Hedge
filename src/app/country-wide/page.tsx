@@ -21,7 +21,7 @@ export default function CountryWidePage() {
             className="absolute inset-0 bg-cover bg-[center_20%] md:bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/hero-infrastructure.png')" }}
           />
-          <div className="absolute inset-0 bg-slate-900/55 md:bg-slate-900/35" />
+          <div className="absolute inset-0 bg-slate-900/55 md:bg-slate-900/45" />
         </div>
 
         {/* Decorative Grid */}
