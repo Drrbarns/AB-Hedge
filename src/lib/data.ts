@@ -2,7 +2,7 @@ import { Building2, Pickaxe, Activity, Truck, Zap, Globe, HardHat, Pill, Coins, 
 
 export const SITE_CONFIG = {
     name: "AB Hedge Group",
-    description: "Premier platform for Engineering, Research, and Project Financing.",
+    description: "Premier platform for Engineering, Research, and Supply Solutions.",
     phone: "+233 (0) 555-010-999",
     email: "info@abhedgegroup.com",
     address: "Digital Center, Accra, Ghana",
@@ -40,11 +40,11 @@ export const BUSINESS_UNITS = [
         name: "Country Wide",
         slug: "/country-wide",
         color: "bg-chart-3", // Navy/Dark
-        description: "Project Financing for Infrastructure & Industrial Growth.",
-        fullDescription: "Financial institution providing structured funding for healthcare, mining, and infrastructure, focusing on sustainable development and long-term economic impact.",
+        description: "Equipment Supply & Procurement for Industrial Growth.",
+        fullDescription: "Specialized supply company providing high-quality equipment and spare parts for healthcare, mining, and infrastructure, focusing on reliable procurement and long-term operational support.",
         icon: Coins,
-        features: ["Project Financing", "Infrastructure Funding", "Operational Growth", "Economic Impact"],
-        link: "Financing Unit",
+        features: ["Equipment Procurement", "Spare Parts Supply", "Operational Support", "Logistics Solutions"],
+        link: "Supply Unit",
     },
 ];
 
@@ -75,11 +75,11 @@ export const CASE_STUDIES = [
         image: "/images/case-study-mining.png",
     },
     {
-        title: "Regional Hospital Financing Structure",
+        title: "Regional Hospital Equipment Supply",
         category: "Healthcare",
         unit: "Country Wide",
-        slug: "regional-hospital-financing",
-        summary: "$50M funding package secured for expansion of regional medical facilities.",
+        slug: "regional-hospital-equipment",
+        summary: "Full medical equipment procurement and delivery for expansion of regional healthcare facilities.",
         image: "/images/case-study-hospital.png",
     },
     {
@@ -91,11 +91,11 @@ export const CASE_STUDIES = [
         image: "/images/case-study-solar.png",
     },
     {
-        title: "Heavy Equipment Lease Program",
+        title: "Heavy Equipment Supply Program",
         category: "Construction",
         unit: "Country Wide",
-        slug: "heavy-equipment-lease",
-        summary: "Custom leasing structure enabling rapid deployment of 50+ excavators for road project.",
+        slug: "heavy-equipment-supply",
+        summary: "Procurement and deployment of 50+ excavators and machinery for a major road construction project.",
         image: "/images/case-study-equipment.png",
     },
     {

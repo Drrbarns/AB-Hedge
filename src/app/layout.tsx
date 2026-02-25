@@ -21,10 +21,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "AB Hedge | Research • Engineering • Financing",
+    default: "AB Hedge | Research • Engineering • Supply Solutions",
     template: "%s | AB Hedge Group",
   },
-  description: "Research, Engineering, and Project Financing solutions across Oil & Gas, Mining, Healthcare, and Infrastructure sectors.",
+  description: "Research, Engineering, and Supply Solutions across Oil & Gas, Mining, Healthcare, and Infrastructure sectors.",
   icons: {
     icon: "/favicon.ico",
   },

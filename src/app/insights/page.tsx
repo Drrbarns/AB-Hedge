@@ -16,15 +16,15 @@ const INSIGHTS = [
     category: "Market Report",
     date: "Feb 12, 2026",
     readTime: "15 min read",
-    summary: "An in-depth analysis of regulatory shifts and technology adoption trends driving the next wave of investment in the region's extractive sector.",
+    summary: "An in-depth analysis of regulatory shifts and technology adoption trends driving the next wave of growth in the region's extractive sector.",
     image: "/images/insight-mining.png"
   },
   {
-    title: "Infrastructure Financing Models for Emerging Markets",
+    title: "Infrastructure Supply Chain Models for Emerging Markets",
     category: "White Paper",
     date: "Jan 28, 2026",
     readTime: "25 min read",
-    summary: "Breaking down the success of PPPs in roadway and healthcare development. A guide for investors and government entities.",
+    summary: "Breaking down the success of supply chain partnerships in roadway and healthcare development. A guide for industry stakeholders and government entities.",
     image: "/images/insight-finance.png"
   },
   {
@@ -82,7 +82,7 @@ export default function InsightsPage() {
             Market <span className="text-amber-500">Intelligence</span> & Analysis.
           </h1>
           <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Stay ahead of the curve with our expert research on industry trends, technical innovations, and financial strategies.
+            Stay ahead of the curve with our expert research on industry trends, technical innovations, and supply chain strategies.
           </p>
         </div>
       </section>

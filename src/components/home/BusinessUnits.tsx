@@ -27,7 +27,7 @@ export function BusinessUnits() {
                             Three Pillars of <span className="text-amber-600 italic">Excellence</span>
                         </h2>
                         <p className="mt-3 sm:mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
-                            A unified approach to industrial growth, combining deep research, technical execution, and robust financial structuring.
+                            A unified approach to industrial growth, combining deep research, technical execution, and reliable equipment supply.
                         </p>
                     </div>
                     <Link href="/about" className="group flex items-center font-medium text-slate-700 hover:text-amber-600 transition-colors text-sm sm:text-base">

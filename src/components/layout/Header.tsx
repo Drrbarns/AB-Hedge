@@ -44,7 +44,7 @@ export function Header() {
                         <span className="text-primary-foreground/40">•</span>
                         <span>Engineering</span>
                         <span className="text-primary-foreground/40">•</span>
-                        <span>Financing</span>
+                        <span>Supply Solutions</span>
                     </div>
                     <div className="flex items-center gap-4 ml-auto">
                         <a href="tel:+233555010999" className="flex items-center gap-1 hover:text-white/80 transition-colors">
@@ -128,11 +128,11 @@ export function Header() {
                                                 )}
                                                 {unit.id === 'country-wide' && (
                                                     <>
-                                                        <ListItem href={`${unit.slug}/process`} title="Funding Process">
-                                                            Step-by-step guide to approval.
+                                                        <ListItem href={`${unit.slug}/process`} title="Our Process">
+                                                            Step-by-step guide to procurement.
                                                         </ListItem>
-                                                        <ListItem href={`${unit.slug}/apply`} title="Apply Now">
-                                                            Secure project financing.
+                                                        <ListItem href={`${unit.slug}/apply`} title="Get Started">
+                                                            Request equipment supply.
                                                         </ListItem>
                                                     </>
                                                 )}

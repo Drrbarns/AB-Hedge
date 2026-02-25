@@ -19,11 +19,11 @@ const OPENINGS = [
     summary: "Lead technical optimization projects for major mining clients, overseeing installation and commissioning."
   },
   {
-    title: "Project Finance Analyst",
-    department: "Country Wide - Finance",
+    title: "Supply Chain Analyst",
+    department: "Country Wide - Procurement",
     type: "Full-time",
     location: "Accra, Ghana",
-    summary: "Structure complex debt and equity deals for infrastructure projects across West Africa."
+    summary: "Manage procurement pipelines and supplier relationships for infrastructure projects across West Africa."
   },
   {
     title: "Market Research Lead",

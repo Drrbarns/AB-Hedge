@@ -82,7 +82,7 @@ export function Hero() {
                         Industrial Excellence.
                     </span>
                     <span className="block text-amber-400 mt-1 sm:mt-2">
-                        Sustainable Capital.
+                        Global Supply.
                     </span>
                 </motion.h1>
 
@@ -92,7 +92,7 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                    AB Hedge Group delivers world-class research, engineering solutions, and project financing to empower the heavy industries that drive global growth.
+                    AB Hedge Group delivers world-class research, engineering solutions, and specialized equipment supply to empower the heavy industries that drive global growth.
                 </motion.p>
 
                 <motion.div
@@ -127,7 +127,7 @@ export function Hero() {
                         <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 flex-shrink-0" /> Global Presence
                     </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-300 justify-center">
-                        <Activity className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 flex-shrink-0" /> $500M+ Financed
+                        <Activity className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 flex-shrink-0" /> $500M+ Projects Delivered
                     </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-300 justify-center">
                         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 flex-shrink-0" /> Fortune 500 Partners

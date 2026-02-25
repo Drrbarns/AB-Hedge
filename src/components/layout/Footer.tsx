@@ -12,7 +12,7 @@ export function Footer() {
                     <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
                         <Logo className="mb-2 sm:mb-4" />
                         <p className="text-slate-400 leading-relaxed text-sm max-w-sm">
-                            An elite alliance of specialized business units delivering research, engineering excellence, and strategic project financing for global industries.
+                            An elite alliance of specialized business units delivering research, engineering excellence, and strategic supply solutions for global industries.
                         </p>
                         <div className="flex gap-4 mt-2">
                             <a href={SITE_CONFIG.socials.linkedin} className="text-slate-500 hover:text-amber-400 transition-colors p-2 -m-2">

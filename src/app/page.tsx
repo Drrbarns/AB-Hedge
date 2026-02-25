@@ -31,7 +31,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               { title: "The Future of Sustainable Mining in West Africa: 2026 Outlook", tag: "Market Report", image: "/images/insight-mining.png" },
-              { title: "Infrastructure Financing Models for Emerging Markets", tag: "White Paper", image: "/images/insight-finance.png" },
+              { title: "Infrastructure Supply Chain Models for Emerging Markets", tag: "White Paper", image: "/images/insight-finance.png" },
               { title: "Engineering Excellence in Offshore Oil & Gas Operations", tag: "Industry Analysis", image: "/images/insight-engineering.png" }
             ].map((insight, i) => (
               <div key={i} className="group cursor-pointer bg-white rounded-xl sm:rounded-2xl border border-slate-200/60 overflow-hidden hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300">
@@ -49,7 +49,7 @@ export default function Home() {
                     {insight.title}
                   </h3>
                   <p className="text-slate-500 text-sm line-clamp-2">
-                    An in-depth analysis of regulatory shifts and technology adoption trends driving the next wave of investment.
+                    An in-depth analysis of regulatory shifts and technology adoption trends driving the next wave of industrial growth.
                   </p>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function Home() {
             Ready to transform your operations?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-amber-100/80 max-w-2xl mx-auto mb-8 sm:mb-10 px-2">
-            Connect with our specialized teams to discuss your specific challenges in research, engineering, or financing.
+            Connect with our specialized teams to discuss your specific challenges in research, engineering, or supply procurement.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
             <Button size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg font-semibold bg-white text-amber-800 hover:bg-amber-50 shadow-lg w-full sm:w-auto" asChild>

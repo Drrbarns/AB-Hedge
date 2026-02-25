@@ -11,8 +11,8 @@ const PILLARS = [
     },
     {
         icon: Scale,
-        title: "Ethical Financing",
-        description: "Transparency and integrity in every transaction, fully compliant with global AML/KYC regulations."
+        title: "Ethical Operations",
+        description: "Transparency and integrity in every transaction, fully compliant with global regulatory standards."
     },
     {
         icon: HardHat,

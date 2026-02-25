@@ -8,7 +8,7 @@ import { INDUSTRIES } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: 'Industries',
-  description: 'Sectors we serve with specialized research, engineering, and financing.',
+  description: 'Sectors we serve with specialized research, engineering, and supply solutions.',
 };
 
 export default function IndustriesPage() {
@@ -58,7 +58,7 @@ export default function IndustriesPage() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-600 transition-colors">{industry.name}</h3>
 
                 <p className="text-slate-600 mb-8 leading-relaxed relative z-10">
-                  Partnering with global leaders in {industry.name.toLowerCase()} to deliver sustainable solutions and capital efficiency.
+                  Partnering with global leaders in {industry.name.toLowerCase()} to deliver sustainable solutions and operational efficiency.
                 </p>
 
                 <div className="flex items-center text-sm font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
@@ -75,7 +75,7 @@ export default function IndustriesPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Cross-Sector Intelligence</h2>
             <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-              Our unique advantage lies in the synergy between our business units. Insights from mining inform our infrastructure financing, while engineering data drives our research strategies.
+              Our unique advantage lies in the synergy between our business units. Insights from mining inform our supply strategies, while engineering data drives our research and procurement decisions.
             </p>
             <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900" asChild>
               <Link href="/insights">Read Our Research</Link>
