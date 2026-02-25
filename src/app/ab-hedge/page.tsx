@@ -14,7 +14,7 @@ export default function ABHedgePage() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[85vh] md:min-h-[70vh] flex items-center border-b border-slate-200">
+      <section className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-center border-b border-slate-200">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <div
