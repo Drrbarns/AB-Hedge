@@ -1,7 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Globe, ShieldCheck, Wrench, Truck, Target, Eye, Handshake, Award, ArrowRight, Fuel, HardHat, HeartPulse } from "lucide-react";
+import Image from "next/image";
+import { Globe, ShieldCheck, Wrench, Truck, Target, Eye, Handshake, Award, ArrowRight, Fuel, HardHat, HeartPulse, Quote } from "lucide-react";
 import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 
@@ -14,20 +15,24 @@ export default function ABHedgePage() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh] flex items-center border-b border-slate-200">
+      <section className="relative overflow-hidden min-h-[70vh] sm:min-h-[80vh] md:min-h-[90vh] flex items-center border-b border-slate-200">
         <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-[center_20%] md:bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-offshore.png')" }}
+          <Image
+            src="/images/hero-offshore.png"
+            alt="Group Hedge operations"
+            fill
+            className="object-cover object-[center_30%] sm:object-[center_25%] md:object-center"
+            priority
+            sizes="100vw"
           />
-          <div className="absolute inset-0 bg-slate-900/55 md:bg-slate-900/45" />
+          <div className="absolute inset-0 bg-slate-900/65 sm:bg-slate-900/55 md:bg-slate-900/45" />
         </div>
 
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.05]" />
         </div>
 
-        <div className="container relative z-10 px-4 md:px-6 text-center pt-28 pb-16 md:pt-32 md:pb-24">
+        <div className="container relative z-10 px-4 md:px-6 text-center pt-24 pb-12 sm:pt-28 sm:pb-16 md:pt-32 md:pb-24">
           <Badge variant="outline" className="mb-6 px-4 py-1.5 border-amber-500/30 bg-amber-500/10 text-amber-400 tracking-wider uppercase text-[10px] sm:text-xs font-semibold backdrop-blur-sm">
             International Supply & Solutions
           </Badge>
@@ -71,8 +76,51 @@ export default function ABHedgePage() {
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* CEO / Founder */}
       <section className="py-20 md:py-28 bg-slate-50 border-y border-slate-200">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-5 gap-10 lg:gap-16 items-center">
+              <div className="md:col-span-2 flex justify-center">
+                <div className="relative w-full max-w-sm mx-auto">
+                  <div className="absolute -inset-3 bg-amber-500/20 rounded-3xl blur-xl" />
+                  <div className="relative overflow-hidden rounded-2xl border-2 border-amber-500/30 shadow-2xl">
+                    <Image
+                      src="/images/ceo-founder.png"
+                      alt="CEO & Founder of Group Hedge"
+                      width={400}
+                      height={500}
+                      className="w-full h-auto object-cover aspect-[4/5]"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:col-span-3">
+                <Badge className="bg-amber-500/10 text-amber-600 hover:bg-amber-500/20 mb-6">Leadership</Badge>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 leading-tight">
+                  Meet Our <span className="text-amber-500">Founder</span>
+                </h2>
+                <p className="text-amber-600 font-semibold text-lg mb-6">CEO & Founder, Group Hedge</p>
+
+                <div className="relative mb-6">
+                  <Quote className="w-8 h-8 text-amber-500/20 absolute -top-2 -left-2" />
+                  <p className="text-slate-600 text-lg leading-relaxed pl-6 italic">
+                    Our vision has always been clear — to build a company rooted in trust, driven by excellence, and committed to delivering world-class supply solutions that empower industries and transform communities across Africa and beyond.
+                  </p>
+                </div>
+
+                <p className="text-slate-600 leading-relaxed">
+                  With years of experience across procurement, supply chain management, and industrial operations, our founder established Group Hedge to bridge the gap between global manufacturers and critical industries in Africa. Under his leadership, the company has grown into a trusted partner for oil &amp; gas, mining, and healthcare organizations seeking reliable, high-quality equipment and spare parts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-20 md:py-28 bg-white border-y border-slate-200">
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 hover:border-amber-200 hover:shadow-xl transition-all duration-300">

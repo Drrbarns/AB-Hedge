@@ -78,9 +78,9 @@ export default function AboutPage() {
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500/20 via-amber-500/5 to-transparent rounded-3xl blur-xl" />
-                <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-2xl max-w-md w-full aspect-[3/4] bg-slate-100">
+                <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-2xl max-w-sm mx-auto lg:max-w-md w-full aspect-[4/5] bg-slate-100">
                   <Image
-                    src="/images/ceo-abu-hassan-mahama.jpg"
+                    src="/images/ceo-founder.png"
                     alt="Mr Abu Hassan Mahama — CEO & Founder of AB Group Hedge"
                     fill
                     className="object-cover object-top"
@@ -88,7 +88,7 @@ export default function AboutPage() {
                     priority
                   />
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-xl">
+                <div className="absolute -bottom-4 -left-4 sm:left-4 lg:-left-4 bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-xl z-10">
                   <p className="font-bold text-lg">Mr Abu Hassan Mahama</p>
                   <p className="text-amber-500 text-sm font-medium">CEO &amp; Founder</p>
                 </div>
