@@ -76,6 +76,34 @@ export function Header() {
                         <div className="hidden lg:block">
                             <NavigationMenu className="max-w-none flex-none">
                                 <NavigationMenuList className="flex w-max flex-none flex-nowrap items-center gap-0.5 sm:gap-1">
+                                <NavigationMenuItem>
+                                    <Link href="/" legacyBehavior passHref>
+                                        <NavigationMenuLink className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "px-2.5 text-xs xl:px-3 xl:text-sm whitespace-nowrap",
+                                            isScrolled
+                                                ? "bg-transparent text-slate-900 hover:bg-slate-100 hover:text-slate-900"
+                                                : "bg-transparent text-white hover:bg-white/10 hover:text-white"
+                                        )}>
+                                            Home
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+
+                                <NavigationMenuItem>
+                                    <Link href="/about" legacyBehavior passHref>
+                                        <NavigationMenuLink className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "px-2.5 text-xs xl:px-3 xl:text-sm whitespace-nowrap",
+                                            isScrolled
+                                                ? "bg-transparent text-slate-900 hover:bg-slate-100 hover:text-slate-900"
+                                                : "bg-transparent text-white hover:bg-white/10 hover:text-white"
+                                        )}>
+                                            About
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+
                                 {BUSINESS_UNITS.map((unit) => (
                                     <NavigationMenuItem key={unit.id}>
                                         <NavigationMenuTrigger className={cn(
@@ -267,6 +295,7 @@ export function Header() {
                                         <h3 className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/60 mb-3">Quick Links</h3>
                                         <div className="grid grid-cols-2 gap-2.5">
                                             {[
+                                                { href: "/", label: "Home" },
                                                 { href: "/about", label: "About Us" },
                                                 { href: "/projects", label: "Projects" },
                                                 { href: "/industries", label: "Industries" },
