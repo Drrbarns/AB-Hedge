@@ -8,9 +8,9 @@ export function Logo({ className }: { className?: string }) {
             <Image
                 src="/images/hedgegroup-logo.png"
                 alt="Hedge Group"
-                width={280}
-                height={84}
-                className="h-16 sm:h-20 w-auto object-contain"
+                width={260}
+                height={78}
+                className="h-14 sm:h-[4.25rem] w-auto object-contain"
                 priority
             />
         </Link>

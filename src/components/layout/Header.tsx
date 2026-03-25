@@ -33,7 +33,7 @@ export function Header() {
         <header className="fixed top-0 left-0 right-0 z-50">
             {/* Top Bar - Hidden on mobile, collapses on scroll */}
             <motion.div
-                className="bg-primary text-primary-foreground py-2 text-xs font-medium tracking-wide border-b border-primary/10 overflow-hidden hidden sm:block"
+                className="bg-primary text-primary-foreground py-1.5 text-[11px] font-medium tracking-wide border-b border-primary/10 overflow-hidden hidden sm:block"
                 initial={{ height: "auto", opacity: 1 }}
                 animate={{ height: isScrolled ? 0 : "auto", opacity: isScrolled ? 0 : 1 }}
                 transition={{ duration: 0.3 }}
@@ -63,21 +63,28 @@ export function Header() {
                 className={cn(
                     "w-full transition-all duration-300 border-b",
                     isScrolled
-                        ? "bg-background/95 backdrop-blur-md shadow-sm border-border py-2"
-                        : "bg-background border-transparent py-3 sm:py-4"
+                        ? "bg-background/95 backdrop-blur-md shadow-sm border-border py-1.5 text-slate-900"
+                        : "bg-background border-transparent py-2 sm:py-2.5 text-white"
                 )}
             >
-                <div className="container mx-auto px-4 flex items-center justify-between">
-                    <Logo />
+                <div className="container mx-auto flex flex-nowrap items-center justify-between gap-2 px-4 lg:gap-3">
+                    {/* shrink-0: prevents flex from crushing mega-menu triggers (was hiding Sapalon / Country Wide) */}
+                    <div className="flex shrink-0 items-center gap-2 lg:gap-4">
+                        <Logo className="shrink-0" />
 
-                    {/* Desktop Nav */}
-                    <div className="hidden lg:flex items-center gap-6">
-                        <NavigationMenu>
-                            <NavigationMenuList>
+                        {/* Desktop Nav */}
+                        <div className="hidden lg:block">
+                            <NavigationMenu className="max-w-none flex-none">
+                                <NavigationMenuList className="flex w-max flex-none flex-nowrap items-center gap-0.5 sm:gap-1">
                                 {BUSINESS_UNITS.map((unit) => (
                                     <NavigationMenuItem key={unit.id}>
-                                        <NavigationMenuTrigger className="bg-transparent text-sm font-medium hover:bg-muted/50 transition-colors">
-                                            {unit.name}
+                                        <NavigationMenuTrigger className={cn(
+                                            "bg-transparent px-2.5 text-xs font-medium transition-colors xl:px-3 xl:text-sm whitespace-nowrap",
+                                            isScrolled
+                                                ? "text-slate-900 hover:bg-muted/50 hover:text-slate-900"
+                                                : "text-white hover:bg-white/10 hover:text-white"
+                                        )}>
+                                            {(unit as { navLabel?: string }).navLabel ?? unit.name}
                                         </NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
@@ -103,37 +110,37 @@ export function Header() {
                                                         </Link>
                                                     </NavigationMenuLink>
                                                 </li>
-                                                <ListItem href={`${unit.slug}/services`} title="Services">
+                                                {/* <ListItem href={`${unit.slug}/services`} title="Services">
                                                     Core capabilities and offerings.
-                                                </ListItem>
+                                                </ListItem> */}
                                                 {unit.id === 'ab-hedge' && (
                                                     <>
-                                                        <ListItem href={`${unit.slug}/reports`} title="Market Reports">
+                                                        {/* <ListItem href={`${unit.slug}/reports`} title="Market Reports">
                                                             Access our latest industry analysis.
                                                         </ListItem>
                                                         <ListItem href={`${unit.slug}/methodology`} title="Methodology">
                                                             Our rigorous research process.
-                                                        </ListItem>
+                                                        </ListItem> */}
                                                     </>
                                                 )}
                                                 {unit.id === 'sapalon' && (
                                                     <>
-                                                        <ListItem href={`${unit.slug}/plans`} title="Maintenance Plans">
+                                                        {/* <ListItem href={`${unit.slug}/plans`} title="Maintenance Plans">
                                                             Bronze, Silver, and Gold tiers.
                                                         </ListItem>
                                                         <ListItem href={`${unit.slug}/request-site-visit`} title="Site Visit">
                                                             Schedule an engineering assessment.
-                                                        </ListItem>
+                                                        </ListItem> */}
                                                     </>
                                                 )}
                                                 {unit.id === 'country-wide' && (
                                                     <>
-                                                        <ListItem href={`${unit.slug}/process`} title="Our Process">
+                                                        {/* <ListItem href={`${unit.slug}/process`} title="Our Process">
                                                             Step-by-step guide to procurement.
                                                         </ListItem>
                                                         <ListItem href={`${unit.slug}/apply`} title="Get Started">
                                                             Request equipment supply.
-                                                        </ListItem>
+                                                        </ListItem> */}
                                                     </>
                                                 )}
                                             </ul>
@@ -143,7 +150,13 @@ export function Header() {
 
                                 <NavigationMenuItem>
                                     <Link href="/projects" legacyBehavior passHref>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                        <NavigationMenuLink className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "px-2.5 text-xs xl:px-3 xl:text-sm whitespace-nowrap",
+                                            isScrolled
+                                                ? "bg-transparent text-slate-900 hover:bg-slate-100 hover:text-slate-900"
+                                                : "bg-transparent text-white hover:bg-white/10 hover:text-white"
+                                        )}>
                                             Projects
                                         </NavigationMenuLink>
                                     </Link>
@@ -151,17 +164,33 @@ export function Header() {
 
                                 <NavigationMenuItem>
                                     <Link href="/contact" legacyBehavior passHref>
-                                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                        <NavigationMenuLink className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "px-2.5 text-xs xl:px-3 xl:text-sm whitespace-nowrap",
+                                            isScrolled
+                                                ? "bg-transparent text-slate-900 hover:bg-slate-100 hover:text-slate-900"
+                                                : "bg-transparent text-white hover:bg-white/10 hover:text-white"
+                                        )}>
                                             Contact
                                         </NavigationMenuLink>
                                     </Link>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
+                        </div>
                     </div>
 
-                    <div className="hidden lg:flex items-center gap-3">
-                        <Button variant="outline" size="sm" asChild className="hidden xl:flex">
+                    <div className="hidden shrink-0 items-center gap-2 lg:flex lg:gap-3">
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            asChild
+                            className={cn(
+                                "hidden xl:flex",
+                                isScrolled && "border-slate-300 bg-transparent text-slate-900 hover:bg-slate-100 hover:text-slate-900",
+                                !isScrolled && "border-white/30 text-white hover:bg-white/10 hover:text-white"
+                            )}
+                        >
                             <Link href="/insights">Insights</Link>
                         </Button>
                         <Button size="sm" asChild>
@@ -172,7 +201,11 @@ export function Header() {
                     {/* Mobile Menu */}
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="lg:hidden">
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                className={cn("lg:hidden", !isScrolled && "text-white hover:bg-white/10 hover:text-white")}
+                            >
                                 <Menu className="h-6 w-6" />
                                 <span className="sr-only">Toggle menu</span>
                             </Button>

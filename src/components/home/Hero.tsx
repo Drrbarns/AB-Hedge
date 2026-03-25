@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ShieldCheck, Globe, Activity, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 const HERO_IMAGES = [
     "/images/hero-offshore.png",
@@ -24,7 +25,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 sm:pt-20 pb-8 bg-slate-900">
+        <section className="relative min-h-[85vh] sm:min-h-[90vh] overflow-hidden bg-slate-900 pb-8 sm:pb-12">
             {/* Background Image Slider */}
             <div className="absolute inset-0 z-0">
                 <AnimatePresence mode="popLayout">
@@ -58,7 +59,16 @@ export function Hero() {
                 }} />
             </div>
 
-            <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
+            {/* Clear fixed header: mobile = nav+logo only; sm+ = yellow top bar + taller nav */}
+            <div
+                className={cn(
+                    "relative z-10 flex min-h-[85vh] sm:min-h-[90vh] flex-col",
+                    "pt-[max(8.5rem,calc(env(safe-area-inset-top,0px)+7.25rem))]",
+                    "sm:pt-[max(11rem,calc(env(safe-area-inset-top,0px)+9.5rem))]",
+                    "lg:pt-[max(11.5rem,calc(env(safe-area-inset-top,0px)+10rem))]"
+                )}
+            >
+                <div className="container flex flex-1 flex-col items-center justify-center px-4 pb-10 pt-2 text-center sm:pt-4 md:px-6 md:pb-14 md:pt-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -133,6 +143,7 @@ export function Hero() {
                         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 flex-shrink-0" /> Fortune 500 Partners
                     </div>
                 </motion.div>
+                </div>
             </div>
         </section>
     );

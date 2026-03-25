@@ -27,6 +27,8 @@ export const BUSINESS_UNITS = [
     {
         id: "sapalon",
         name: "Sapalon Ghana Limited",
+        /** Shorter label for the main nav so all items stay visible on laptop widths */
+        navLabel: "Sapalon",
         slug: "/sapalon",
         color: "bg-chart-2", // Goldish
         description: "Engineering Technical Services: Installation & Maintenance.",

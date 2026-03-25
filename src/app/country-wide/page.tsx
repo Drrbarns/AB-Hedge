@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Building2, Truck, Activity, Landmark, LineChart, Coins } from "lucide-react";
+import { Building2, Truck, Activity, Landmark, LineChart, Coins, ShieldCheck, Boxes, Clock3, CheckCircle2 } from "lucide-react";
 import type { Metadata } from 'next';
 import { Badge } from "@/components/ui/badge";
 
@@ -107,6 +107,127 @@ export default function CountryWidePage() {
             <div className="bg-white p-6 rounded-xl border border-slate-200 text-center hover:shadow-lg transition-all">
               <Truck className="w-10 h-10 text-amber-500 mx-auto mb-4" />
               <h3 className="font-bold text-slate-900">Road Construction</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expanded Capabilities */}
+      <section className="py-24 bg-white border-t border-slate-200">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <Badge className="bg-amber-500/10 text-amber-600 hover:bg-amber-500/20 mb-5">What We Deliver</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-5">Comprehensive Supply Capabilities</h2>
+            <p className="text-slate-600 text-lg leading-relaxed">
+              Beyond basic procurement, Country Wide supports end-to-end equipment lifecycle needs, from sourcing and
+              compliance verification to delivery coordination and after-supply support.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-amber-200 hover:shadow-lg transition-all">
+              <Boxes className="w-10 h-10 text-amber-600 mb-5" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Bulk Equipment Supply</h3>
+              <p className="text-slate-600 leading-relaxed mb-5">
+                Coordinated supply of heavy-duty equipment, technical components, and project-critical spare parts for
+                multi-site operations.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> OEM and certified alternatives</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Multi-vendor consolidation</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-amber-200 hover:shadow-lg transition-all">
+              <ShieldCheck className="w-10 h-10 text-amber-600 mb-5" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Quality & Compliance</h3>
+              <p className="text-slate-600 leading-relaxed mb-5">
+                Every order is screened for technical fit, safety standards, and documentation integrity to ensure
+                project compliance and performance reliability.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Product verification checks</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Traceable procurement records</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-amber-200 hover:shadow-lg transition-all">
+              <Clock3 className="w-10 h-10 text-amber-600 mb-5" />
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Time-Critical Delivery</h3>
+              <p className="text-slate-600 leading-relaxed mb-5">
+                We prioritize lead-time control and delivery visibility to reduce project downtime and keep operations
+                on schedule.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-600">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Delivery milestone tracking</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-amber-500" /> Responsive status reporting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Delivery Process */}
+      <section className="py-24 bg-slate-50 border-y border-slate-200">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center mb-14">
+            <Badge className="bg-amber-500/10 text-amber-600 hover:bg-amber-500/20 mb-5">How We Work</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-5">Our Supply Delivery Process</h2>
+            <p className="text-slate-600 text-lg leading-relaxed">
+              A structured, transparent process designed to minimize risk and maximize execution speed.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Requirement Mapping",
+                text: "We define technical scope, priority items, quantity forecasts, and delivery windows."
+              },
+              {
+                step: "02",
+                title: "Strategic Sourcing",
+                text: "Our team identifies approved suppliers and secures quality equipment at the best value."
+              },
+              {
+                step: "03",
+                title: "Validation & Coordination",
+                text: "We validate product specifications and coordinate shipment planning with clear milestones."
+              },
+              {
+                step: "04",
+                title: "Delivery & Support",
+                text: "Equipment arrives on schedule with post-delivery support for continuity and uptime."
+              },
+            ].map((item) => (
+              <div key={item.step} className="bg-white rounded-2xl border border-slate-200 p-7 hover:shadow-lg transition-all">
+                <div className="text-amber-600 text-sm font-bold tracking-wider mb-4">{item.step}</div>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[420px] h-[420px] bg-amber-500/10 rounded-full blur-[120px]" />
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Need a dependable procurement partner?</h2>
+            <p className="text-slate-300 text-lg leading-relaxed mb-10">
+              Country Wide helps organizations secure mission-critical equipment with speed, quality, and confidence.
+              Let us support your next project with a tailored supply strategy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold px-8" asChild>
+                <Link href="/country-wide/apply">Request a Quote</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 bg-transparent px-8" asChild>
+                <Link href="/contact">Talk to Our Team</Link>
+              </Button>
             </div>
           </div>
         </div>

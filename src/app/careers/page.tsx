@@ -10,37 +10,6 @@ export const metadata: Metadata = {
   description: 'Join AB Hedge Group and shape the future of global industry.',
 };
 
-const OPENINGS = [
-  {
-    return: "Senior Process Engineer",
-    department: "Sapalon Ghana - Engineering",
-    type: "Full-time",
-    location: "Takoradi, Ghana",
-    summary: "Lead technical optimization projects for major mining clients, overseeing installation and commissioning."
-  },
-  {
-    title: "Supply Chain Analyst",
-    department: "Country Wide - Procurement",
-    type: "Full-time",
-    location: "Accra, Ghana",
-    summary: "Manage procurement pipelines and supplier relationships for infrastructure projects across West Africa."
-  },
-  {
-    title: "Market Research Lead",
-    department: "AB Hedge - Research",
-    type: "Full-time",
-    location: "Remote / Hybrid",
-    summary: "Drive our market intelligence unit, producing high-level reports on commodity trends."
-  },
-  {
-    title: "HSE Compliance Manager",
-    department: "Sapalon Ghana - Safety",
-    type: "Full-time",
-    location: "Kumasi, Ghana",
-    summary: "Ensure zero-compromise safety standards across all operational sites."
-  }
-];
-
 export default function CareersPage() {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
@@ -123,31 +92,20 @@ export default function CareersPage() {
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">Current Openings</h2>
 
-          <div className="grid gap-6 max-w-4xl mx-auto">
-            {OPENINGS.map((job, i) => (
-              <div key={i} className="bg-white p-6 md:p-8 rounded-xl border border-slate-200 hover:border-amber-200 hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group">
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
-                    {job.title}
-                  </h3>
-                  <div className="flex flex-wrap gap-3 mb-4">
-                    <Badge variant="secondary" className="bg-slate-100 text-slate-600 font-normal">{job.department}</Badge>
-                    <Badge variant="secondary" className="bg-slate-100 text-slate-600 font-normal">{job.location}</Badge>
-                    <Badge variant="secondary" className="bg-slate-100 text-slate-600 font-normal">{job.type}</Badge>
-                  </div>
-                  <p className="text-slate-600 text-sm max-w-xl">
-                    {job.summary}
-                  </p>
-                </div>
-                <Button className="shrink-0 bg-slate-900 text-white hover:bg-slate-800" asChild>
-                  <Link href="/contact">Apply Now</Link>
-                </Button>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white p-8 md:p-12 rounded-2xl border border-slate-200 text-center">
+              <div className="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center mx-auto mb-6">
+                <Briefcase className="w-7 h-7 text-slate-500" />
               </div>
-            ))}
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">No Open Positions</h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                There are currently no open positions.
+              </p>
+            </div>
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-slate-500 mb-4">Don't see your role? We are always hiring.</p>
+            <p className="text-slate-500 mb-4">Please check back soon for future opportunities.</p>
             <Button variant="outline" className="text-slate-900 border-slate-300" asChild>
               <Link href="/contact">Send General Application</Link>
             </Button>

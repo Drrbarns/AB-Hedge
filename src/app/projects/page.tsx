@@ -80,9 +80,9 @@ export default function ProjectsPage() {
                   </p>
 
                   <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
-                    <Link href={`/projects/${study.slug}`} className="text-sm font-bold text-slate-900 group-hover:text-amber-600 transition-colors flex items-center">
+                    <span className="text-sm font-bold text-slate-900 group-hover:text-amber-600 transition-colors flex items-center cursor-default">
                       View Case Study <ArrowUpRight className="ml-2 w-4 h-4" />
-                    </Link>
+                    </span>
                   </div>
                 </div>
               </div>

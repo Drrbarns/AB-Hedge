@@ -1,23 +1,12 @@
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import type { Metadata } from "next";
+import CountryWidePage from "../page";
 
+export const metadata: Metadata = {
+  title: "Country Wide Solutions",
+  description: "Expanded supply and procurement solutions from Country Wide.",
+};
 
 export default function SolutionsPage() {
-  return (
-    <div className="container py-24 px-4 md:px-6">
-      <h1 className="text-4xl font-bold tracking-tight mb-6 capitalize">solutions</h1>
-      <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-        This page represents the country-wide/solutions section. Content is currently being drafted by our expert team.
-      </p>
-      <div className="flex gap-4">
-        <Button variant="outline" asChild>
-          <Link href="/">Return Home</Link>
-        </Button>
-        <Button asChild>
-           <Link href="/contact">Contact Us</Link>
-        </Button>
-      </div>
-    </div>
-  );
+  return <CountryWidePage />;
 }

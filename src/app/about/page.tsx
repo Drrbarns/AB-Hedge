@@ -75,10 +75,10 @@ export default function AboutPage() {
             </div>
 
             {/* Image Side */}
-            <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative">
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end lg:sticky lg:top-32 self-start">
+              <div className="relative w-full max-w-sm mx-auto lg:max-w-md">
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500/20 via-amber-500/5 to-transparent rounded-3xl blur-xl" />
-                <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-2xl max-w-sm mx-auto lg:max-w-md w-full aspect-[4/5] bg-slate-100">
+                <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-2xl w-full aspect-[4/5] bg-slate-100">
                   <Image
                     src="/images/ceo-founder.png"
                     alt="Mr Abu Hassan Mahama — CEO & Founder of AB Group Hedge"
@@ -129,19 +129,19 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Staggered Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white p-6 rounded-2xl border border-slate-100 translate-y-8 shadow-lg">
+            {/* Unit Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5 items-stretch">
+              <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-lg h-full">
                 <Search className="w-8 h-8 text-amber-500 mb-4" />
                 <h3 className="font-bold text-slate-900 mb-2">AB Hedge</h3>
                 <p className="text-sm text-slate-500">Technical insights &amp; market optimization strategies.</p>
               </div>
-              <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-xl text-white">
+              <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-xl text-white h-full">
                 <HardHat className="w-8 h-8 text-amber-500 mb-4" />
                 <h3 className="font-bold text-white mb-2">Sapalon Ghana</h3>
                 <p className="text-sm text-slate-400">Engineering reliability &amp; safety compliance.</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-lg col-span-2 md:col-span-1 md:translate-x-8">
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-lg sm:col-span-2 lg:col-span-2">
                 <Coins className="w-8 h-8 text-amber-500 mb-4" />
                 <h3 className="font-bold text-slate-900 mb-2">Country Wide</h3>
                 <p className="text-sm text-slate-500">Equipment supply &amp; industrial procurement.</p>

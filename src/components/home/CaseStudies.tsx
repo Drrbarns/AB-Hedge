@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { CASE_STUDIES } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,9 +17,9 @@ export function CaseStudies() {
                             Global Impact & <span className="text-amber-600 italic">Success Stories</span>
                         </h2>
                     </div>
-                    <Link href="/projects" className="hidden sm:flex items-center text-sm font-semibold tracking-wide border-b-2 border-amber-500 text-slate-900 hover:text-amber-600 transition-colors pb-1 whitespace-nowrap">
+                    <span className="hidden sm:flex items-center text-sm font-semibold tracking-wide border-b-2 border-amber-500 text-slate-900 pb-1 whitespace-nowrap cursor-default">
                         View All Projects <ArrowUpRight className="ml-2 w-4 h-4" />
-                    </Link>
+                    </span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -59,9 +58,9 @@ export function CaseStudies() {
                                     </p>
                                 </div>
                                 <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-0 mt-auto">
-                                    <Link href={`/projects/${study.slug}`} className="flex items-center text-sm font-semibold text-amber-600 group-hover:translate-x-1 transition-transform">
+                                    <span className="flex items-center text-sm font-semibold text-amber-600 group-hover:translate-x-1 transition-transform cursor-default">
                                         Read Case Study <ArrowUpRight className="ml-2 w-4 h-4" />
-                                    </Link>
+                                    </span>
                                 </div>
                             </div>
                         </motion.div>
@@ -69,8 +68,8 @@ export function CaseStudies() {
                 </div>
 
                 <div className="mt-8 sm:mt-12 text-center sm:hidden">
-                    <Button variant="outline" asChild className="w-full">
-                        <Link href="/projects">View All Projects</Link>
+                    <Button variant="outline" className="w-full" type="button">
+                        View All Projects
                     </Button>
                 </div>
             </div>
