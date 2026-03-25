@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
-import { Phone, ArrowRight, Menu, Search, Briefcase, Calculator, HardHat, FileText, ChevronRight } from "lucide-react"
+import { Phone, ArrowRight, Menu, Search, Briefcase, Calculator, HardHat, FileText, ChevronRight, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -16,7 +16,7 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Logo } from "@/components/ui/logo"
 import { BUSINESS_UNITS } from "@/lib/data"
 
@@ -210,42 +210,100 @@ export function Header() {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-[280px] sm:w-[350px] overflow-y-auto">
-                            <nav className="flex flex-col gap-6 mt-8">
-                                <div className="flex flex-col gap-2">
-                                    <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">Business Units</h3>
-                                    {BUSINESS_UNITS.map((unit) => (
-                                        <Link
-                                            key={unit.id}
-                                            href={unit.slug}
-                                            className="flex items-center justify-between py-3 border-b border-border/50 hover:text-primary transition-colors"
-                                        >
-                                            <span className="font-medium text-sm">{unit.name}</span>
-                                            <ChevronRight className="w-4 h-4 opacity-50" />
-                                        </Link>
-                                    ))}
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">Quick Links</h3>
-                                    <Link href="/about" className="py-3 hover:text-primary text-sm">About Us</Link>
-                                    <Link href="/projects" className="py-3 hover:text-primary text-sm">Projects</Link>
-                                    <Link href="/industries" className="py-3 hover:text-primary text-sm">Industries</Link>
-                                    <Link href="/insights" className="py-3 hover:text-primary text-sm">Insights</Link>
-                                    <Link href="/contact" className="py-3 hover:text-primary font-bold text-sm">Contact Us</Link>
+                        <SheetContent
+                            side="right"
+                            showCloseButton={false}
+                            className="w-[88vw] max-w-[380px] p-0 overflow-hidden border-l border-slate-800 bg-slate-950 text-white"
+                        >
+                            <nav className="flex h-full flex-col">
+                                <div className="px-5 pt-5 pb-4 border-b border-white/10 bg-slate-950/95">
+                                    <div className="flex items-center justify-between">
+                                        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white/70">Menu</p>
+                                        <SheetClose asChild>
+                                            <button
+                                                type="button"
+                                                className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 text-white/80 hover:bg-white/10 hover:text-white transition-colors"
+                                                aria-label="Close menu"
+                                            >
+                                                <X className="w-4 h-4" />
+                                            </button>
+                                        </SheetClose>
+                                    </div>
+                                    <p className="text-sm text-white/60 mt-2">Navigate AB Hedge Group</p>
                                 </div>
 
-                                {/* Mobile contact info */}
-                                <div className="border-t border-border/50 pt-4">
-                                    <a href="tel:+233555010999" className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-primary">
-                                        <Phone className="w-4 h-4" />
-                                        +233 (0) 555-010-999
-                                    </a>
+                                <div className="flex-1 overflow-y-auto px-5 py-5 space-y-7">
+                                    <div>
+                                        <h3 className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/60 mb-3">Business Units</h3>
+                                        <div className="space-y-2.5">
+                                            {BUSINESS_UNITS.map((unit) => (
+                                                <SheetClose asChild key={unit.id}>
+                                                    <Link
+                                                        href={unit.slug}
+                                                        className={cn(
+                                                            "flex items-center justify-between rounded-xl border px-3.5 py-3.5 transition-all",
+                                                            pathname.startsWith(unit.slug)
+                                                                ? "bg-white/12 border-white/20"
+                                                                : "bg-white/[0.04] border-white/10 hover:bg-white/[0.08]"
+                                                        )}
+                                                    >
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center">
+                                                                <unit.icon className="w-4.5 h-4.5 text-amber-400" />
+                                                            </div>
+                                                            <div>
+                                                                <p className="text-sm font-semibold text-white">{unit.name}</p>
+                                                                <p className="text-[11px] text-white/55">Explore details</p>
+                                                            </div>
+                                                        </div>
+                                                        <ChevronRight className="w-4 h-4 text-white/50" />
+                                                    </Link>
+                                                </SheetClose>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/60 mb-3">Quick Links</h3>
+                                        <div className="grid grid-cols-2 gap-2.5">
+                                            {[
+                                                { href: "/about", label: "About Us" },
+                                                { href: "/projects", label: "Projects" },
+                                                { href: "/industries", label: "Industries" },
+                                                { href: "/insights", label: "Insights" },
+                                            ].map((item) => (
+                                                <SheetClose asChild key={item.href}>
+                                                    <Link
+                                                        href={item.href}
+                                                        className={cn(
+                                                            "rounded-lg border px-3 py-2.5 text-sm text-center transition-colors",
+                                                            pathname === item.href
+                                                                ? "bg-amber-500/15 border-amber-500/30 text-amber-300"
+                                                                : "bg-white/[0.04] border-white/10 text-white/85 hover:bg-white/[0.08]"
+                                                        )}
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                </SheetClose>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
+                                        <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/60 mb-2">Contact</p>
+                                        <a href="tel:+233555010999" className="flex items-center gap-2 text-sm text-white/85 hover:text-white transition-colors">
+                                            <Phone className="w-4 h-4 text-amber-400" />
+                                            +233 (0) 555-010-999
+                                        </a>
+                                    </div>
                                 </div>
 
-                                <div className="mt-auto">
-                                    <Button className="w-full mb-2" asChild>
-                                        <Link href="/contact">Get a Quote</Link>
-                                    </Button>
+                                <div className="p-5 border-t border-white/10 bg-slate-950/90">
+                                    <SheetClose asChild>
+                                        <Button className="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold" asChild>
+                                            <Link href="/contact">Get a Quote</Link>
+                                        </Button>
+                                    </SheetClose>
                                 </div>
                             </nav>
                         </SheetContent>
