@@ -102,7 +102,7 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                    AB Hedge Group delivers world-class research, engineering solutions, and specialized equipment supply to empower the heavy industries that drive global growth.
+                    Group Hedge delivers world-class research, engineering solutions, and specialized equipment supply to empower the heavy industries that drive global growth.
                 </motion.p>
 
                 <motion.div

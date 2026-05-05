@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Terms of Use',
-  description: 'AB Hedge Group Terms and Conditions.',
+  description: 'Group Hedge Terms and Conditions.',
 };
 
 export default function TermsPage() {
@@ -21,7 +21,7 @@ export default function TermsPage() {
           <section>
             <h3 className="text-2xl font-bold text-slate-900 mb-4">1. Agreement to Terms</h3>
             <p>
-              These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and AB Hedge Group ("we," "us" or "our"), concerning your access to and use of the website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto.
+              These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Group Hedge ("we," "us" or "our"), concerning your access to and use of the website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto.
             </p>
           </section>
 

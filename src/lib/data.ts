@@ -1,7 +1,7 @@
 import { Building2, Pickaxe, Activity, Truck, Zap, Globe, HardHat, Pill, Coins, Search, Briefcase } from "lucide-react";
 
 export const SITE_CONFIG = {
-    name: "AB Hedge Group",
+    name: "Group Hedge",
     description: "Premier platform for Engineering, Research, and Supply Solutions.",
     phone: "+233 (0) 555-010-999",
     email: "info@abhedgegroup.com",

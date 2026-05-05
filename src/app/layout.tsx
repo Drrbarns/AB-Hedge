@@ -12,6 +12,41 @@ const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700"], // Regular, Medium, Semibold, Bold
 });
 
+function getSiteUrl() {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://abhedge.vercel.app";
+  const normalized = configuredUrl.startsWith("http") ? configuredUrl : `https://${configuredUrl}`;
+  return new URL(normalized);
+}
+
+const siteUrl = getSiteUrl();
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Group Hedge",
+  url: siteUrl.toString(),
+  logo: `${siteUrl.toString().replace(/\/$/, "")}/images/hedgegroup-logo.png`,
+  description:
+    "Group Hedge delivers research, engineering, and supply solutions across oil & gas, mining, healthcare, and infrastructure sectors.",
+  telephone: "+233555010999",
+  sameAs: [
+    "https://linkedin.com/company/abhedge",
+    "https://twitter.com/abhedge",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Group Hedge",
+  url: siteUrl.toString(),
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${siteUrl.toString().replace(/\/$/, "")}/insights?query={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -20,13 +55,80 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: siteUrl,
+  applicationName: "Group Hedge",
   title: {
     default: "AB Hedge | Research • Engineering • Supply Solutions",
-    template: "%s | AB Hedge Group",
+    template: "%s | Group Hedge",
   },
-  description: "Research, Engineering, and Supply Solutions across Oil & Gas, Mining, Healthcare, and Infrastructure sectors.",
+  description:
+    "Group Hedge provides research, engineering, and supply solutions across Oil & Gas, Mining, Healthcare, and Infrastructure sectors in Ghana and beyond.",
+  keywords: [
+    "Group Hedge",
+    "Ghana engineering services",
+    "industrial equipment supply",
+    "oil and gas solutions",
+    "mining technical services",
+    "healthcare equipment procurement",
+    "infrastructure supply chain",
+    "Sapalon Ghana",
+    "Country Wide procurement",
+  ],
+  authors: [{ name: "Group Hedge" }],
+  creator: "Group Hedge",
+  publisher: "Group Hedge",
+  category: "Engineering and Industrial Services",
+  manifest: "/manifest.webmanifest",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GH",
+    url: "/",
+    siteName: "Group Hedge",
+    title: "Group Hedge | Research • Engineering • Supply Solutions",
+    description:
+      "Integrated research, engineering, and procurement capabilities serving critical industries across Ghana and beyond.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Group Hedge - Research, Engineering, Supply Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Group Hedge | Research • Engineering • Supply Solutions",
+    description:
+      "Integrated research, engineering, and procurement capabilities serving critical industries.",
+    images: ["/twitter-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/icon", sizes: "32x32", type: "image/png" },
+      { url: "/icon", sizes: "192x192", type: "image/png" },
+      { url: "/icon", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -50,6 +152,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="flex min-h-screen flex-col">
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+            />
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />

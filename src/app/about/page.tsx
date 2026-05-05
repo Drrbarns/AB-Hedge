@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'AB Group Hedge: Unifying Research, Engineering, and Supply Solutions under the visionary leadership of Mr Abu Hassan Mahama.',
+  description: 'Group Hedge: Unifying Research, Engineering, and Supply Solutions under the visionary leadership of Mr Abu Hassan Mahama.',
 };
 
 export default function AboutPage() {
@@ -34,7 +34,7 @@ export default function AboutPage() {
             Our Story
           </Badge>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-8 text-white max-w-4xl mx-auto">
-            About <span className="text-amber-500">AB Group Hedge</span>
+            About <span className="text-amber-500">Group Hedge</span>
           </h1>
           <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
             A visionary enterprise built on the pillars of Research, Engineering, and Supply Solutions — driving industrial progress across Africa and beyond.
@@ -55,10 +55,10 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-5 text-slate-600 text-lg leading-relaxed">
                 <p>
-                  AB Group Hedge was founded by <strong className="text-slate-900">Mr Abu Hassan Mahama</strong>, a distinguished business leader and entrepreneur with deep roots in Ghana&apos;s industrial landscape. Driven by an unwavering commitment to excellence and a bold vision for Africa&apos;s economic transformation, he established AB Group Hedge to bridge the gap between world-class industrial solutions and the continent&apos;s growing demand for reliable supply, engineering, and research services.
+                  Group Hedge was founded by <strong className="text-slate-900">Mr Abu Hassan Mahama</strong>, a distinguished business leader and entrepreneur with deep roots in Ghana&apos;s industrial landscape. Driven by an unwavering commitment to excellence and a bold vision for Africa&apos;s economic transformation, he established Group Hedge to bridge the gap between world-class industrial solutions and the continent&apos;s growing demand for reliable supply, engineering, and research services.
                 </p>
                 <p>
-                  Under his leadership, the group has grown from a single-focused enterprise into a diversified conglomerate operating across the oil &amp; gas, mining, healthcare, and infrastructure sectors. Mr Mahama&apos;s hands-on approach and strategic foresight have been instrumental in forging partnerships with leading global manufacturers, ensuring that every project undertaken by AB Group Hedge meets the highest international standards.
+                  Under his leadership, the group has grown from a single-focused enterprise into a diversified conglomerate operating across the oil &amp; gas, mining, healthcare, and infrastructure sectors. Mr Mahama&apos;s hands-on approach and strategic foresight have been instrumental in forging partnerships with leading global manufacturers, ensuring that every project undertaken by Group Hedge meets the highest international standards.
                 </p>
                 <p>
                   His philosophy is simple yet powerful: <em className="text-slate-800 font-medium">invest in people, deliver with integrity, and build solutions that outlast the projects themselves.</em> This guiding principle has earned the trust of clients, partners, and institutions across three continents.
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 <div className="relative rounded-3xl overflow-hidden border-2 border-slate-200 shadow-2xl w-full aspect-[4/5] bg-slate-100">
                   <Image
                     src="/images/ceo-founder.png"
-                    alt="Mr Abu Hassan Mahama — CEO & Founder of AB Group Hedge"
+                    alt="Mr Abu Hassan Mahama — CEO & Founder of Group Hedge"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 400px"
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 Modern industrial projects require more than just one skillset. They demand a convergence of market intelligence, technical execution, and reliable supply chains.
               </p>
               <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                AB Group Hedge was built to bridge these gaps. By integrating our specialized units, we provide a seamless &ldquo;Concept to Commissioning&rdquo; partnership for our clients in oil, gas, mining, and healthcare.
+                Group Hedge was built to bridge these gaps. By integrating our specialized units, we provide a seamless &ldquo;Concept to Commissioning&rdquo; partnership for our clients in oil, gas, mining, and healthcare.
               </p>
               <div className="flex gap-4">
                 <div className="flex flex-col gap-2">

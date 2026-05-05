@@ -257,7 +257,7 @@ export function Header() {
                                             </button>
                                         </SheetClose>
                                     </div>
-                                    <p className="text-sm text-white/60 mt-2">Navigate AB Hedge Group</p>
+                                    <p className="text-sm text-white/60 mt-2">Navigate Group Hedge</p>
                                 </div>
 
                                 <div className="flex-1 overflow-y-auto px-5 py-5 space-y-7">

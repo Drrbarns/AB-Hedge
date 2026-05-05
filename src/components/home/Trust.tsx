@@ -44,7 +44,7 @@ export function Trust() {
                     <p className="text-amber-400 font-semibold text-xs sm:text-sm tracking-wider uppercase mb-2 sm:mb-3">Why Trust Us</p>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-3 sm:mb-4">Uncompromising Standards</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto text-base sm:text-lg">
-                        At AB Hedge Group, trust is our most valuable asset. We operate with absolute integrity, safety, and precision.
+                        At Group Hedge, trust is our most valuable asset. We operate with absolute integrity, safety, and precision.
                     </p>
                 </div>
 

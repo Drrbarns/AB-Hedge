@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   title: 'Insights',
-  description: 'Latest market reports, industry analysis, and technical papers from AB Hedge Group.',
+  description: 'Latest market reports, industry analysis, and technical papers from Group Hedge.',
 };
 
 const INSIGHTS = [

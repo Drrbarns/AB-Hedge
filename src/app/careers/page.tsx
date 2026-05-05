@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   title: 'Careers',
-  description: 'Join AB Hedge Group and shape the future of global industry.',
+  description: 'Join Group Hedge and shape the future of global industry.',
 };
 
 export default function CareersPage() {

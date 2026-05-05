@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
-  description: 'AB Hedge Group Cookie Policy.',
+  description: 'Group Hedge Cookie Policy.',
 };
 
 export default function CookiesPage() {

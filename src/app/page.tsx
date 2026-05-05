@@ -6,6 +6,16 @@ import { Trust } from "@/components/home/Trust";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, FileText } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Group Hedge | Research • Engineering • Supply Solutions",
+  description:
+    "Group Hedge delivers integrated research, engineering, and supply solutions for Oil & Gas, Mining, Healthcare, and Infrastructure sectors.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (
