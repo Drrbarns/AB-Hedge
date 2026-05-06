@@ -104,6 +104,20 @@ export function Header() {
                                     </Link>
                                 </NavigationMenuItem>
 
+                                <NavigationMenuItem>
+                                    <Link href="/services" legacyBehavior passHref>
+                                        <NavigationMenuLink className={cn(
+                                            navigationMenuTriggerStyle(),
+                                            "px-2.5 text-xs xl:px-3 xl:text-sm whitespace-nowrap",
+                                            isScrolled
+                                                ? "bg-transparent text-slate-900 hover:bg-slate-100 hover:text-slate-900"
+                                                : "bg-transparent text-white hover:bg-white/10 hover:text-white"
+                                        )}>
+                                            Services
+                                        </NavigationMenuLink>
+                                    </Link>
+                                </NavigationMenuItem>
+
                                 {BUSINESS_UNITS.map((unit) => (
                                     <NavigationMenuItem key={unit.id}>
                                         <NavigationMenuTrigger className={cn(
@@ -297,6 +311,7 @@ export function Header() {
                                             {[
                                                 { href: "/", label: "Home" },
                                                 { href: "/about", label: "About Us" },
+                                                { href: "/services", label: "Services" },
                                                 { href: "/projects", label: "Projects" },
                                                 { href: "/industries", label: "Industries" },
                                                 { href: "/insights", label: "Insights" },

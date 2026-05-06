@@ -112,6 +112,7 @@ export const CASE_STUDIES = [
 
 export const NAV_LINKS = [
     { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
     { name: "Industries", href: "/industries" },
     { name: "Projects", href: "/projects" },
     { name: "Insights", href: "/insights" },
