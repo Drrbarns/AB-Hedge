@@ -18,8 +18,8 @@ export default function CountryWidePage() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <div
-            className="absolute inset-0 bg-cover bg-[center_20%] md:bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-infrastructure.png')" }}
+            className="absolute inset-0 bg-cover bg-[center_30%] md:bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/hero-research.png')" }}
           />
           <div className="absolute inset-0 bg-slate-900/55 md:bg-slate-900/45" />
         </div>
