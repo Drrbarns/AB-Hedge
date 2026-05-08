@@ -13,6 +13,7 @@ const HERO_IMAGES = [
     "/images/hero-mining.png",
     "/images/hero-healthcare.png",
     "/images/hero-automotive.png",
+    "/images/hero-research.png",
     "/images/hero-infrastructure.png"
 ];
 
