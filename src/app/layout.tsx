@@ -28,7 +28,7 @@ const organizationJsonLd = {
   logo: `${siteUrl.toString().replace(/\/$/, "")}/images/hedgegroup-logo.png`,
   description:
     "Group Hedge delivers research, engineering, and supply solutions across oil & gas, mining, healthcare, and infrastructure sectors.",
-  telephone: "+233555010999",
+  telephone: "+233244232566",
   sameAs: [
     "https://linkedin.com/company/abhedge",
     "https://twitter.com/abhedge",

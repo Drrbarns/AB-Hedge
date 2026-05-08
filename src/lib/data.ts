@@ -3,7 +3,7 @@ import { Building2, Pickaxe, Activity, Truck, Zap, Globe, HardHat, Pill, Coins, 
 export const SITE_CONFIG = {
     name: "Group Hedge",
     description: "Premier platform for Engineering, Research, and Supply Solutions.",
-    phone: "+233 (0) 555-010-999",
+    phone: "+233 (0) 244 232 566",
     email: "info@abhedgegroup.com",
     address: "Digital Center, Accra, Ghana",
     socials: {

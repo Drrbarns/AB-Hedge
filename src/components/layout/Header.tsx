@@ -47,9 +47,9 @@ export function Header() {
                         <span>Supply Solutions</span>
                     </div>
                     <div className="flex items-center gap-4 ml-auto">
-                        <a href="tel:+233555010999" className="flex items-center gap-1 hover:text-white/80 transition-colors">
+                        <a href="tel:+233244232566" className="flex items-center gap-1 hover:text-white/80 transition-colors">
                             <Phone className="w-3 h-3" />
-                            <span>+233 (0) 555-010-999</span>
+                            <span>+233 (0) 244 232 566</span>
                         </a>
                         <Link href="/contact" className="hidden sm:inline-block hover:underline">
                             Request a Concept Note
@@ -335,9 +335,9 @@ export function Header() {
 
                                     <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
                                         <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/60 mb-2">Contact</p>
-                                        <a href="tel:+233555010999" className="flex items-center gap-2 text-sm text-white/85 hover:text-white transition-colors">
+                                        <a href="tel:+233244232566" className="flex items-center gap-2 text-sm text-white/85 hover:text-white transition-colors">
                                             <Phone className="w-4 h-4 text-amber-400" />
-                                            +233 (0) 555-010-999
+                                            +233 (0) 244 232 566
                                         </a>
                                     </div>
                                 </div>
